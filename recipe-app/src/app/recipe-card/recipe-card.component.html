@@ -1,0 +1,20 @@
+<ion-item>
+  <ion-label class="ion-text-wrap">
+    <h2 class="recipe-name" id="recipe-name">{{ name }}</h2>
+    <span class="recipe-details">
+      <ion-chip id="chip-time">
+        <ion-icon name="time" color="dark"></ion-icon>
+        <ion-label id="text-time">{{ cookingTime }} min.</ion-label>
+      </ion-chip>
+      <ion-chip id="chip-people">
+        <ion-icon name="people" color="dark"></ion-icon>
+        <ion-label id="text-people">{{ peopleEating }} personas</ion-label>
+      </ion-chip>
+      <ion-chip id="chip-difficulty">
+        <ion-icon name="cloudy" color="dark"></ion-icon>
+        <ion-label id="text-difficulty">{{ difficulty }}/4 Medio</ion-label>
+      </ion-chip>
+    </span>
+    <p id="recipe-desc">{{ desc }}</p>
+  </ion-label>
+</ion-item>
