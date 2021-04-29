@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import { By } from 'protractor';
+import { Recipe } from '../interfaces/recipe.interface';
 
 import { RecipeCardComponent } from './recipe-card.component';
 
@@ -8,7 +8,16 @@ describe('RecipeCardComponent', () => {
   let component: RecipeCardComponent;
   let fixture: ComponentFixture<RecipeCardComponent>;
 
+  const input:Recipe = {
+    name: 'Fideos con Salsa',
+    description: 'Sabrosa receta para comer en familia.',
+    time: 30,
+    people: 4,
+    difficulty: 1
+  };
+
   beforeEach(waitForAsync(() => {
+
     TestBed.configureTestingModule({
       declarations: [ RecipeCardComponent ],
       imports: [IonicModule.forRoot()]
@@ -16,6 +25,7 @@ describe('RecipeCardComponent', () => {
 
     fixture = TestBed.createComponent(RecipeCardComponent);
     component = fixture.componentInstance;
+    component.recipe = input;
     fixture.detectChanges();
   }));
 
@@ -23,16 +33,15 @@ describe('RecipeCardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit ('should show fixed texts', () => {
+  it ('should show recipe texts', () => {
+
     const expected = {
       name: 'Fideos con Salsa',
       time: '30 min.',
       people: '4 personas',
-      difficulty: '2/4 Medio',
+      difficulty: '2/5 Fácil',
       desc: 'Sabrosa receta para comer en familia.'
     };
-
-    fixture.detectChanges();
 
     const actual = {
       name: fixture.debugElement.nativeElement.querySelector('#recipe-name').innerHTML,
@@ -41,8 +50,6 @@ describe('RecipeCardComponent', () => {
       difficulty: fixture.debugElement.nativeElement.querySelector('#text-difficulty').innerHTML,
       desc: fixture.debugElement.nativeElement.querySelector('#recipe-desc').innerHTML
     };
-
-    console.log('LOGGING', fixture.debugElement.nativeElement.querySelector('#recipe-name').innerHTML, expected.name, actual.name);
 
     expect(actual.name).toEqual(expected.name);
     expect(actual.time).toEqual(expected.time);
