@@ -7,14 +7,12 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <app-step-card></app-step-card>
+  <br>
+  <br>
+  <br>
+  <br>
   <ion-list>
     <app-recipe-card *ngFor="let recipe of getRecipes()" [recipe]="recipe"></app-recipe-card>
-  </ion-list>
-  <br>
-  <br>
-  <br>
-  <br>
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
   </ion-list>
 </ion-content>
