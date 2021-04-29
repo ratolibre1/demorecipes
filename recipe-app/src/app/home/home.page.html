@@ -7,7 +7,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-recipe-card></app-recipe-card>
+  <ion-list>
+    <app-recipe-card *ngFor="let recipe of getRecipes()" [recipe]="recipe"></app-recipe-card>
+  </ion-list>
   <br>
   <br>
   <br>

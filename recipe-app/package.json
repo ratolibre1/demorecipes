@@ -1,6 +1,6 @@
 {
   "name": "recipe-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Arturo Vial Arqueros.",
   "homepage": "https://github.com/ratolibre1/",
   "scripts": {
@@ -10,7 +10,12 @@
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "testcoverage": "nyc ng test --watch=false"
+    "testcoverage": "ng test --browsers=ChromeHeadless --code-coverage --watch=false"
+  },
+  "nyc": {
+    "reporter": [
+      "html"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -21,6 +26,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@ionic/angular": "^5.5.2",
+    "karma-spec-reporter": "0.0.32",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -50,7 +56,7 @@
     "karma": "~5.2.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
