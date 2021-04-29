@@ -5,16 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
-import { MessageComponentModule } from '../message/message.module';
 import { RecipeCardComponentModule } from '../recipe-card/recipe-card.component.module';
+import { StepCardComponentModule } from '../step-card/step-card.component.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MessageComponentModule,
     RecipeCardComponentModule,
+    StepCardComponentModule,
     HomePageRoutingModule
   ],
   declarations: [HomePage]

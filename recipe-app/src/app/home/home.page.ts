@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../interfaces/recipe.interface';
-import { DataService, Message } from '../services/data.service';
 import { RecipeService } from '../services/recipe.service';
 
 @Component({
@@ -9,11 +8,7 @@ import { RecipeService } from '../services/recipe.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private data: DataService, private recipeService: RecipeService) {}
-
-  getMessages(): Message[] {
-    return this.data.getMessages();
-  }
+  constructor(private recipeService: RecipeService) {}
 
   getRecipes(): Recipe[] {
     return this.recipeService.recipes;
