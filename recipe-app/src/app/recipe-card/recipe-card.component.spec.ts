@@ -13,7 +13,8 @@ describe('RecipeCardComponent', () => {
     description: 'Sabrosa receta para comer en familia.',
     time: 30,
     people: 4,
-    difficulty: 1
+    difficulty: 1,
+    steps: []
   };
 
   beforeEach(waitForAsync(() => {
@@ -40,7 +41,8 @@ describe('RecipeCardComponent', () => {
       time: '30 min.',
       people: '4 personas',
       difficulty: '2/5 Fácil',
-      desc: 'Sabrosa receta para comer en familia.'
+      desc: 'Sabrosa receta para comer en familia.',
+      steps: []
     };
 
     const actual = {

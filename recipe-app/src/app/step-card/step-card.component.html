@@ -1,6 +1,12 @@
 <ion-item>
   <ion-label class="ion-text-wrap">
-    <h2 class="step-number" id="step-number">1</h2>
-    <h3 id="step-detail">Poner en un recipiente la crema de leche.</h3>
+    <h2 class="step-number" id="step-number">{{ step.number }}</h2>
+    <h3 id="step-detail">{{ step.detail }}</h3>
+    <ion-button class="step-button" color="warning" id="button-back">
+      <ion-icon name="chevron-back-circle-outline"></ion-icon>
+    </ion-button>
+    <ion-button class="step-button" color="success" id="button-next">
+      Siguiente<ion-icon name="play-circle-outline"></ion-icon>
+    </ion-button>
   </ion-label>
 </ion-item>
