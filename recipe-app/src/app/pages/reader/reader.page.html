@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lector de Recetas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide *ngFor="let step of testRecipe.steps">
+      <app-step-card  [step]="step"></app-step-card>
+    </ion-slide>
+    <!--<ion-slide>
+      <div class="slide">
+        <img src="./slide-1.png"/>
+        <h2>Welcome</h2>
+        <p>The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
+      </div>
+    </ion-slide>-->
+  </ion-slides>
+</ion-content>

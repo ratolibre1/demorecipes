@@ -1,12 +1,16 @@
-<ion-item>
-  <ion-label class="ion-text-wrap">
-    <h2 class="step-number" id="step-number">{{ step.number }}</h2>
-    <h3 id="step-detail">{{ step.detail }}</h3>
+<ion-card>
+  <!-- ion-label class="ion-text-wrap">
     <ion-button class="step-button" color="warning" id="button-back">
       <ion-icon name="chevron-back-circle-outline"></ion-icon>
     </ion-button>
     <ion-button class="step-button" color="success" id="button-next">
       Siguiente<ion-icon name="play-circle-outline"></ion-icon>
     </ion-button>
-  </ion-label>
-</ion-item>
+  </ion-label -->
+  <ion-card-header>
+    <ion-card-title class="step-number" id="step-number">{{ step.number }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p id="step-detail">{{ step.detail }}</p>
+  </ion-card-content>
+</ion-card>

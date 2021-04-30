@@ -15,6 +15,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'reader',
+    loadChildren: () => import('./pages/reader/reader.module').then( m => m.ReaderPageModule)
+  },
 ];
 
 @NgModule({

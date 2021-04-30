@@ -7,13 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-button [routerLink]="['/reader']">Probar Lector</ion-button>
+  <br>
+  <br>
+  <br>
+  <br>
   <ion-list>
     <app-step-card *ngFor="let step of testRecipe.steps" [step]="step"></app-step-card>
   </ion-list>
-  <br>
-  <br>
-  <br>
-  <br>
   <ion-list>
     <app-recipe-card *ngFor="let recipe of getRecipes()" [recipe]="recipe"></app-recipe-card>
   </ion-list>
