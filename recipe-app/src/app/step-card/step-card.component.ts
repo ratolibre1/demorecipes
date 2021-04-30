@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Step } from '../interfaces/step.interface';
 
 @Component({
   selector: 'app-step-card',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-card.component.scss'],
 })
 export class StepCardComponent implements OnInit {
+  @Input() step: Step;
 
   constructor() { }
 
